@@ -10,6 +10,7 @@ pub trait SolverToAny: 'static {
   fn as_any(&self) -> &dyn Any;
 }
 
+#[macro_export]
 macro_rules! solver_to_any {
   ($name:ident) => {
     impl SolverToAny for $name {
